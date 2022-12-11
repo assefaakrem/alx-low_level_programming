@@ -6,7 +6,8 @@
  *Return: Always 0 (Success)
  *function to print the
 */
-int main(void)/* function to print the output */
+/* function to print output */
+int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
 			return (0);
