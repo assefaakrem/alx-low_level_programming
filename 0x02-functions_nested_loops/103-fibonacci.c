@@ -13,7 +13,7 @@ int main(void)
 	{
 		k = i + j;
 		i = j;
-		j=k;
+		j = k;
 		if (k % 2 == 0 && k < 4000000)
 		{
 			sums += k;
@@ -21,4 +21,4 @@ int main(void)
 	}
 	printf("%lu\n", sums);
 	return (0);
-}
+i}
