@@ -7,7 +7,7 @@
 *Return: n
 */
 
-void swap_int(int *a, int *b)/*function which returns the swap of two int*/
+void swap_int(int *a, int *b)
 {
 	int n;
 
