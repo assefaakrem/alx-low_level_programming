@@ -7,7 +7,8 @@
 *Return: integers
 */
 
-void swap_int(int *a, int *b)
+void swap_int(int *a, int *b)/**swap_int - a function that swaps the values of 
+			       two integers*/
 {
 	int n;
 
