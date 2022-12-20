@@ -7,9 +7,9 @@
 *Return: n
 */
 
-void swap_int(int *a, int *b)
+void swap_int(int *a, int *b) /*pointer variables a and b for the swap*/
 {
-	int n;
+	int n;/*integer variable to store pointers*/
 
 	n = *a;
 	*a = *b;
