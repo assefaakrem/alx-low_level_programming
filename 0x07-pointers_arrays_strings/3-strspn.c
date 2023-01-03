@@ -11,21 +11,23 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int cont = 0;
-	char *t = accept;
+	int j = 0;
+	int flag;
 
-	while (*s++)
+	while (*s != '\0')
 	{
-		while (*accept++)
+		flag = 0;
+		while (*(accept + j) != '\0')
 		{
-			if (*(s - 1) == *(accept - 1))
-			{
-				c++;
-				break;
-			}
-			if (!(*--accept))
-				break;
-			accept = t;
+			if (*s == *(accept + j))
+				flag = 1;
+			j += 1;
 		}
-		return (c);
+		j = 0;
+		if (flag == 0)
+			break;
+		cont += 1;
+		s++;
 	}
+	return (cont);
 }
