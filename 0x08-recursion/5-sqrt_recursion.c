@@ -23,7 +23,7 @@ int _sqrt_recursion(int n)
  *
  * @num: input number
  * @i: counter variable
- * Return : int
+ * Return : integer
  */
 
 int getNumSqr(int num, int i)
