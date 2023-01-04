@@ -30,8 +30,8 @@ int getNumSqr(int num, int i)
 {
 	if (i <1)
 		return (-1);
-	else if (i * i == n)
+	else if (i * i == num)
 		return (i);
 	else
-		return (getNumSqr(n, i - 1));
+		return (getNumSqr(num, i - 1));
 }
