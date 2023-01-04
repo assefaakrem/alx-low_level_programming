@@ -23,15 +23,15 @@ int _sqrt_recursion(int n)
  *
  * @num: input number
  * @i: counter variable
- * Return : if square root
+ * Return: int
  */
 
 int getNumSqr(int num, int i)
 {
-	if (i <1)
-		return (-1);
-	else if (i * i == num)
+	if (num == (i * i))
 		return (i);
+	else if (num > (i * i))
+		return (-1);
 	else
-		return (getNumSqr(num, i - 1));
+		return (getNumSqr(num, i + 1));
 }
