@@ -2,7 +2,8 @@
 
 /**
  * _sqrt_recursion - function that returns the natural
- * square root of a number
+ *square root of a number
+ * @n: input number
  * Return: int
  */
 
@@ -18,7 +19,7 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * getNumSqr - function that gets de num of sqroot
+ * getNumSqr - function that gets the number of square root
  *
  * @num: input number
  * @i: counter variable
