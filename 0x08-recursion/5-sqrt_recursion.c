@@ -28,10 +28,10 @@ int _sqrt_recursion(int n)
 
 int getNumSqr(int num, int i)
 {
-	if (num == (i * i))
-		return (i);
-	else if (num > (i * i))
-		return (getNumSqr(num, i + 1));
-	else
+	if (i <1)
 		return (-1);
+	else if (i * i == n)
+		return (i);
+	else
+		return (getNumSqr(n, i - 1));
 }
