@@ -1,45 +1,44 @@
 #include <stdlib.h>
 
 /**
- * argstostr - concatenates all the arguments of your program
- * @ac: argument count
- * @av: argument vector
- * Return: char
+ * argstostr - prints args
+ * @ac: takes in width of grid
+ * @av: height of grid
+ * Return: the args one line at a time
  */
+
 char *argstostr(int ac, char **av)
 {
+	char *str;
+	int count = 0, a = 0, b = 0, c = 0;
 
-		char *ar, *str;
-		int i, j, cont;
-
-		if (ac == 0 || av == NULL)
-			return (NULL);
-		for (i = 0; i < ac; i++)
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	while (a < ac)
+	{
+		b = 0;
+		while (av[a][b] != '\0')
 		{
-			j = 0;
-			while (av[i][j] != '\0')
-			{
-				j++;
-				cont++;
-			}
-			cont++;
+			count++;
+			b++;
 		}
-		ar = malloc(cont * sizeof(char));
-		if (ar == NULL)
-			return (NULL);
-		str = ar;
-		for (i = 0; i < ac; i++)
+		a++;
+	}
+	count = count + ac + 1;
+	str = malloc(sizeof(char) * count);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	for (a = 0; a < ac; a++)
+	{
+		for (b = 0; av[a][b] != '\0'; b++)
 		{
-			j = 0;
-			while (av[i][j] != '\0')
-			{
-				*ar = av[i][j];
-				j++;
-				ar++;
-			}
-			*ar = '\n';
-			ar++;
+			str[c] = av[a][b];
+			c++;
 		}
-		return (str);
-		free(ar);
+		str[c] = '\n';
+		c++;
+	}
+	return (str);
 }
