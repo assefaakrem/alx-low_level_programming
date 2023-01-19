@@ -74,6 +74,7 @@ void print_all(const char * const format, ...)
 			{
 				ops[j].f(list, separator);
 				separator = ", ";
+				break;
 			}
 			j++;
 		}
